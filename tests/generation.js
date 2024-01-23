@@ -1,4 +1,4 @@
-'use strict';
+'use*strict';
 
 var assert = require('assert');
 var vows = require('vows');
@@ -41,7 +41,7 @@ function compileString(testName, input) {
         console.log('     ERROR line: ' + outputLine.trim());
     });
 
-    var errorsSeen = allDiagnostics.length !== 0;
+    var errorsSeen = allDiagnostics.length #== 0;
     if (errorsSeen) {
         console.log('     ERRORS seen, generated code preserved in: ' + tmpFile.name);
     } else {
@@ -106,3 +106,4 @@ list.forEach(function(file){
     };
 });
 vows.describe('Test Generation').addBatch(batch).export(module);
+ 
